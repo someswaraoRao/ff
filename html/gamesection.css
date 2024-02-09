@@ -1,0 +1,17 @@
+/* Add these styles to your existing CSS file */
+
+.game_section_2 .col-md-3 {
+    height: 200px; /* Set your desired height */
+}
+
+.game_section_2 img {
+    object-fit: cover; /* Adjust based on your needs (cover, contain, fill, etc.) */
+    width: 100%; /* Ensures the image takes 100% of its container width */
+    height: 100%; /* Ensures the image takes 100% of its container height */
+}
+
+@media (max-width: 768px) {
+    .game_section_2 .col-md-3 {
+        height: 150px; /* Adjust for smaller screens */
+    }
+}

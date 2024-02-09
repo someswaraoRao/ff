@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('ff.jpg');
+            background-size: cover;
+
+        }
+
+        .login-container {
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .login-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container" style="margin-top: 15%;">
+    <div class="login-form">
+        <h2>Player Login</h2>
+        <form id="playerLoginForm">
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="button" onclick="submitLoginForm()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function submitLoginForm() {
+        var mobile = document.getElementById('mobile').value;
+        var password = document.getElementById('password').value;
+
+        // Perform validation and send login details to the server for authentication
+        // This is where you would typically make an AJAX request to your server
+        console.log('Mobile:', mobile);
+        console.log('Password:', password);
+        // Add your authentication logic here
+    }
+</script>
+
+</body>
+</html>
