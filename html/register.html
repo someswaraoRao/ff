@@ -13,15 +13,14 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('ff.jpg'); /* Add this line */
+            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHF6Z3Zzbjk0NDh2Z3JiYTAxdXQ0ajhmeXAxdmptZHY5dWM3c3I1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif'); /* Add this line */
             background-size: cover;
         }
 
         form {
-            background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(238, 232, 232, 0.1);
             width: 350px;
             max-width: 100%;
             box-sizing: border-box;
@@ -30,7 +29,7 @@
         }
 
         h2 {
-            color: #007bff;
+            color: #d8dee3;
             text-align: center;
         }
 
@@ -48,7 +47,7 @@
             box-sizing: border-box;
             border: 1px solid #ced4da;
             border-radius: 4px;
-            background-color: #f8f9fa;
+            background-color: #f9fafc;
         }
 
         small {
@@ -79,28 +78,26 @@
 <form id="registrationForm">
     <h2>Tournament Registration</h2>
 
-    <label for="teamName">Team Name:</label>
-    <input type="text" id="teamName" name="teamName" required>
+    
+    <input type="text" id="team name" name="teamName" placeholder="Team Name" required>
 
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <input type="text" id="username" name="username" placeholder="User Name" required>
 
-    <label for="mobileNumber">Mobile Number:</label>
-    <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
-    <small>Enter a 10-digit mobile number without spaces or dashes.</small>
+    
+    <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+    
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" placeholder="Password" required>
 
     <div class="form-group">
-        <label for="timingSelect">Preferred Timing:</label>
-        <select class="form-control" id="timingSelect" name="timing">
-            <option value="morning">--select--</option>
+    
+        <select  id="timingSelect" name="timing">
+            <option value="morning">--Select Time--</option>
 
-            <option value="morning">10:30</option>
-            <option value="afternoon">11:15</option>
-            <option value="evening">2:00</option>
-            <option value="night">2:45</option>
+            <option value="morning">10:00 am</option>
+            <option value="afternoon">11:00 am</option>
+            <option value="evening">12:00 pm</option>
+            <option value="night">1:00 pm</option>
         </select>
     </div>
 

@@ -219,6 +219,7 @@ button {
 .layout_padding {
     padding-top: 90px;
     padding-bottom: 0px;
+    
 }
 
 .padding_0 {
@@ -409,6 +410,7 @@ button {
     float: left;
     padding-top: 50px;
     padding-bottom: 90px;
+    margin-right: 40%;
 }
 
 .image_2 {
@@ -586,11 +588,11 @@ button {
 
 .box_section {
     width: 100%;
-    float: left;
     border: 2px solid #ffffff;
     height: auto;
     padding: 60px 50px;
     border-radius: 10px;
+ 
 }
 
 .box_section:hover {
@@ -602,6 +604,7 @@ button {
     margin: 0 auto;
     text-align: center;
     display: flex;
+
 }
 
 .register_text {
@@ -611,6 +614,7 @@ button {
     color: #ffffff;
     text-align: center;
     padding-top: 20px;
+    
 }
 
 .casino_section {
