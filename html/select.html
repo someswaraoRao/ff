@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotdog Esports | Rocket League</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
+  <style>
+    body {
+      margin: 0px;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #eee;
+      background-image: url(https://images.unsplash.com/photo-1478358161113-b0e11994a36b?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hotdog-esports {
+      background: url('https://cdn.discordapp.com/attachments/288836426848796673/302570312774451202/hotdogesports-logo.png') no-repeat;
+      background-size: contain;
+      background-position: 50%;
+      height: 300px;
+    }
+
+    .team-section {
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 3em;
+    }
+
+    .primary-nav {
+      padding: 25px;
+      background-color: #fbb460;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .primary-nav .site-link {
+      display: inline-block;
+      background-size: cover;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25em;
+      letter-spacing: 2px;
+    }
+
+    .primary-nav .nav-link {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.25em;
+    }
+
+    .primary-nav .nav-link.selected {
+      color: #ea4145;
+      margin: 5px;
+      border-bottom: 4px solid #ea4145;
+    }
+
+    .primary-nav .nav-link:hover {
+      color: #ea4145;
+      border-bottom: 4px solid #ea4145;
+    }
+
+    .team-members {
+      list-style: none;
+    }
+
+    .team-members .team-member {
+      display: inline-block;
+      margin: 0px 20px 0px 0px;
+      text-align: center;
+    }
+
+    .team-members .team-member .team-member-image-container {
+      position: relative;
+    }
+
+    .team-members .team-member .team-member-image-text {
+      position: absolute;
+      color: red;
+      text-transform: uppercase;
+      top: 50%;
+      left: 0px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .team-members .team-member .team-member-image {
+      margin-top: 10px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      shape-outside: circle();
+      transition: border 0.5s ease-out, transform 0.5s ease-out;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    .team-members .team-member .team-member-image.live {
+      border: 4px solid #ea4145;
+    }
+
+    .team-members .team-member .team-member-image.selected {
+      border: 4px solid #fbb460;
+      transform: scale(1.05);
+    }
+
+    .team-members .team-member .team-member-image:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+
+    .team-members .team-member .team-member-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 15px 0px 0px;
+    }
+
+    .team-members .team-member .team-member-name1 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 15px 0px 0px;
+    }
+
+    .team-members .team-member .team-member-handle {
+      font-size: 14px;
+      margin: 0 0 5px;
+      font-weight: 300;
+    }
+
+    .player-header {
+      height: 400px;
+      background-color: #ea4145;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    .player-header .player-header-image {
+      background: url('http://am-a.akamaihd.net/image/?f=https://lolstatic-a.akamaihd.net/esports-assets/production/player/sneaky-3c359lbn.png&resize=785:785') no-repeat;
+      background-size: contain;
+    }
+
+    .player-header .player-header-content {
+      color: #fff;
+      padding-top: 100px;
+    }
+
+    .player-header .player-header-content .player-quote {
+      font-style: italic;
+      padding-left: 10px;
+    }
+
+    .player-header .player-header-content .player-handle-small {
+      border-left: 4px solid #fff;
+      padding-left: 10px;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      opacity: 0.5;
+    }
+
+    .player-header .player-header-content .player-handle-big {
+      line-height: 70px;
+      font-size: 3.5em;
+      letter-spacing: -2px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="container">
+    <div class="row">
+      <div class="col hotdog-esports">
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="team-sport">
+      <h2>Selected Teams</h2>
+    </div>
+    
+    <ul class="team-members">
+      <li class="team-member">
+        <img class="team-member-image" src="https://s-media-cache-ak0.pinimg.com/originals/59/27/e3/5927e3bd8b395b30ef19d83810cdd16f.jpg" alt="Cloud 9 Sneaky" />
+        <p class="team-member-name">Imperious Rex</p>
+        <p class="team-member-name1">     MVP        </p>
+        <p class="team-member-handle">ᴿᵉˣ〆ꕶᴏᴍᴜ⸙</p>
+      </li>
+
+      <li class="team-member">
+        <img class="team-member-image" src="https://s-media-cache-ak0.pinimg.com/originals/59/27/e3/5927e3bd8b395b30ef19d83810cdd16f.jpg" alt="Cloud 9 Sneaky" />
+        <p class="team-member-name">Imperious Rex</p>
+        <p class="team-member-name1">     MVP        </p>
+        <p class="team-member-handle">ᴿᵉˣ〆ꕶᴏᴍᴜ⸙</p>
+      </li>
+
+
+      <li class="team-member">
+        <img class="team-member-image" src="https://s-media-cache-ak0.pinimg.com/originals/59/27/e3/5927e3bd8b395b30ef19d83810cdd16f.jpg" alt="Cloud 9 Sneaky" />
+        <p class="team-member-name">Imperious Rex</p>
+        <p class="team-member-name1">     MVP        </p>
+        <p class="team-member-handle">ᴿᵉˣ〆ꕶᴏᴍᴜ⸙</p>
+      </li>
+
+     <li class="team-member">
+        <img class="team-member-image" src="https://s-media-cache-ak0.pinimg.com/originals/59/27/e3/5927e3bd8b395b30ef19d83810cdd16f.jpg" alt="Cloud 9 Sneaky" />
+        <p class="team-member-name">Imperious Rex</p>
+        <p class="team-member-name1">     MVP        </p>
+        <p class="team-member-handle">ᴿᵉˣ〆ꕶᴏᴍᴜ⸙</p>
+      </li>
+    </ul>
+
+</body>
+</html>

@@ -274,7 +274,7 @@ button {
 .banner_taital_1 {
     width: 100%;
     float: left;
-    font-size: 50px;
+    font-size: 45px;
     color: #fffdfd;
     text-transform: uppercase;
     text-align: center;
@@ -451,8 +451,8 @@ button {
     width: 100%;
     float: left;
     text-align: center;
-    font-size: 13px;
-    color: #ffffff;
+    font-size: 15px;
+    color: #ff0101;
     margin: 0 auto;
 }
 
@@ -580,7 +580,7 @@ button {
 .play_text {
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 35px;
     color: #cccaca;
     margin: 0px;
     text-align: center;
