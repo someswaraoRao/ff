@@ -149,11 +149,13 @@
         display: block;
         text-align: center;
     }
+     /* Your CSS styles here */
+   
 
     </style>
 </head>
 <body>
-    <?php
+<?php
     // Establish database connection
     $servername = "localhost";
     $username = "root";
@@ -172,18 +174,20 @@
         // Retrieve form data
         $teamname = $_POST["team_name"];
         $leadname = $_POST["lead_name"];
-        $mobileno = $_POST["mno"];
-        $password = $_POST["pass"];
-        $timing = $_POST["time"];
-        $paymentmethod = $_POST["payment"];
+        $mobileno = $_POST["mobileno"];
+        $password = $_POST["password"];
+       
+     
     
         // Prepare and bind SQL statement
-        $stmt = $conn->prepare("INSERT INTO reg1 (team_name, lead_name, mno, pass,time, payment) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $teamname, $leadname, $mobileno, $password, $timing, $paymentmethod);
+        $stmt = $conn->prepare("INSERT INTO reg1 (team_name, lead_name, mno, pass) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $teamname, $leadname, $mobileno, $password);
     
         // Execute the statement
-        if ($stmt->execute()) {
-            echo "Registration successful!";
+          // Execute the statement
+          if ($stmt->execute()) {
+            // Set the message
+            $message = "Registration successful!";
         } else {
             echo "Error: " . $stmt->error;
         }
@@ -192,50 +196,21 @@
         $stmt->close();
         $conn->close();
     }
-    ?>
+?>
     
-    <form id="registrationForm" method="post" >
+<form id="registrationForm" method="post" action="slot.php">
 
     <h2>Tournament Registration</h2>
 
-    
-    <input type="text" id="teamname" name="teamname" placeholder="Team Name" class="form-control" required>
-
-    <input type="text" id="leadname" name="leadname" placeholder="Lead Name" class="form-control" required>
-
-    
+    <input type="text" id="teamname" name="team_name" placeholder="Team Name" class="form-control" required>
+    <input type="text" id="leadname" name="lead_name" placeholder="Lead Name" class="form-control" required>
     <input type="tel" id="mobileno" name="mobileno" placeholder="Mobile Number" class="form-control" pattern="[0-9]{10}" required>
+    <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+
     
 
-    <input type="password" id="password" name="password" placeholder="Password"class="form-control" required>
-
-    <div class="form-group">
-    
-        <select  id="timingSelect" name="timing">
-            <option value="morning">--Select Time--</option>
-
-            <option value="morning">10:00 am</option>
-            <option value="afternoon">11:00 am</option>
-            <option value="evening">12:00 pm</option>
-            <option value="night">1:00 pm</option>
-        </select>
-    </div>
-    <div class="form-group">
-    
-        <select  id="paymentmethod" name="paymentmethod">
-            <option value="op">--Payment Method--</option>
-
-            <option value="1">Offline</option>
-            <option value="2">Online</option>
-     
-        </select>
-    </div>
-
-   
-
-    <button type="button" onclick="submitForm()" style="margin-top: 10%;">Register</button>
+    <button type="submit" style="margin-top: 10%;">Register</button>
 </form>
-
 
 
 <script>
@@ -261,8 +236,13 @@
 
         // Reset the form after submission
         document.getElementById('registrationForm').reset();
+        
     }
 </script>
+<script>
+    alert("<?php echo $message; ?>");
+</script>
+
 
 </body>
 </html>
