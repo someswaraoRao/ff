@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Slots</title>
     <style>
+        contact-form {
+        width: 35%;
+        margin: auto;
+        padding: 40px;
+        background-color: rgb(210, 214, 213);
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-control:focus {
+        border-color: #7d0a0a;
+    }
+
+    .error {
+        color: #e74c3c;
+        font-size: 14px;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        border: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #7d0a0a;
+        color: #fff;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: green;
+    }
+
+    select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #333;
+        transition: border-color 0.3s ease;
+    }
+
+    select:focus {
+        border-color: #0a7d0a;
+    }
+
+    center {
+        display: block;
+        text-align: center;
+    }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -70,25 +136,33 @@
     <div class="container">
         <div class="slot">
             <h2>Slot 1: 10am</h2>
-            <p>Epic Battle Royale</p>
+            <form action="registration.php" method="POST">
+            <input type="text" name="lead_name" class="form-control" placeholder="Lead Name" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
             <a href="#" class="pay-button">Pay Offline</a>
             <a href="QR.html" class="pay-button">Pay Online</a>
         </div>
         <div class="slot">
             <h2>Slot 2: 11am</h2>
-            <p>Epic Battle Royale</p>
+            <form action="registration.php" method="POST">
+            <input type="text" name="lead_name"class="form-control"  placeholder="Lead Name" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
             <a href="#" class="pay-button">Pay Offline</a>
             <a href="QR.html" class="pay-button">Pay Online</a>
         </div>
         <div class="slot">
             <h2>Slot 3: 12pm</h2>
-            <p>Epic Battle Royale</p>
+            <form action="registration.php" method="POST">
+            <input type="text" name="lead_name" class="form-control" placeholder="Lead Name" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
             <a href="#" class="pay-button">Pay Offline</a>
             <a href="QR.html" class="pay-button">Pay Online</a>
         </div>
         <div class="slot">
             <h2>Slot 4: 1pm</h2>
-            <p>Epic Battle Royale</p>
+            <form action="registration.php" method="POST">
+            <input type="text" name="lead_name" class="form-control" placeholder="Lead Name" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
             <a href="#" class="pay-button">Pay Offline</a>
             <a href="QR.html" class="pay-button">Pay Online</a>
         </div>
