@@ -1,4 +1,34 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $num = $_POST['num'];
+    $pass = $_POST['pass'];
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "freefire";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM logins WHERE num='$num' AND pass='$pass'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Valid credentials, redirect to game.html
+        $_SESSION['num'] = $num;
+        header("Location: game.php");
+        exit; // Make sure no further output is sent
+    } else {
+        $alert_message = "Invalid phone number or password";
+    }
+
+    $conn->close();
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -183,37 +213,21 @@
 
     <div class="login-box">
         <h2>Login</h2>
-        <form>
+        <form method="post">
           <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Username</label>
+            <input type="text" name="num" required="">
+            <label>Phone Number</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="">
+            <input type="password" name="pass" required="">
             <label>Password</label>
           </div>
-          <a href="room1.html">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            Submit
-          </a>
+            <button type="submit" class="submit-btn">Submit</button>
+
         </form>
       </div>
 
-<script>
-    function submitLoginForm() {
-        var mobile = document.getElementById('mobile').value;
-        var password = document.getElementById('password').value;
-
-        // Perform validation and send login details to the server for authentication
-        // This is where you would typically make an AJAX request to your server
-        console.log('Mobile:', mobile);
-        console.log('Password:', password);
-        // Add your authentication logic here
-    }
-</script>
-
-</body>
-</html>

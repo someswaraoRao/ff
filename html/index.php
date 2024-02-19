@@ -63,7 +63,7 @@
                         <a class="nav-link" href="register.html">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login1.html">Slot Registration</a>
+                        <a class="nav-link" href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="game.html">Game</a>
@@ -93,8 +93,8 @@
                            <h4 class="banner_taital">Welcome to</h4>
                            <h1 class="banner_taital_1">FREE FIRE TOURNAMENT</h1>
                            <p class="banner_text" style="align-items: center;">🎮"Compete in our thrilling tournament & stand a chance to win exciting prizes"🏆</p>
-                           <div class="book_bt"><a href="register.php">Registration</a></div>
-                           <div class="book_bt"><a href="login1.html">Slot Registration</a></div>
+                           <div class="book_bt"><a href="ffregister.php">Registration</a></div>
+                           <div class="book_bt"><a href="login.php">login</a></div>
                         </div>
                      </div>
            

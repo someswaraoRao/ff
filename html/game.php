@@ -89,42 +89,43 @@
 
             <div class="game_section_2 layout_padding">
                <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/Aq8sbOJuScX8X7Vhnw/giphy.gif')center/cover;">
-                        <h1 class="number_text">01</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF1eDF1aTByam1lN200b2NsY3k1Mm13bHZ5MW1yNzA0OHhtdnIwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cbZ4dcdB0RiZbgD4dr/giphy.gif') center/cover;" >
-                        <h1 class="number_text">02</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlzdjkyYmEyd2R3NDVteGZ4bHhpdWhseWxqdGl6ODQzYjZmMzRsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgVG03iAINEG69Iz2v/giphy.gif') center/cover;">
-                        <h1 class="number_text">03</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdydDBoc3lkcXdpcWM2YWdweGVuMmp6ZjAxbjI1cmVjdHMxbThrYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a8GXVOeiBzPPG0L8cS/giphy.gif')center/cover;">
-                        <h1 class="number_text">04</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
+               <div class="col-lg-3 col-sm-6">
+    <div class="image_2" style="background: url('https://media.giphy.com/media/Aq8sbOJuScX8X7Vhnw/giphy.gif')center/cover;">
+        <h1 class="number_text">01</h1>
+        <h1 class="game_text_1">Game</h1>
+        <p class="many_text">Battle Royale</p>
+        <p class="many_text">An exciting battle between 12 Squads</p>
+    </div>
+    <div class="playnow_bt active"><a href="room1.php?time=10">Play Now</a></div>
+</div>
+<div class="col-lg-3 col-sm-6">
+    <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF1eDF1aTByam1lN200b2NsY3k1Mm13bHZ5MW1yNzA0OHhtdnIwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cbZ4dcdB0RiZbgD4dr/giphy.gif') center/cover;">
+        <h1 class="number_text">02</h1>
+        <h1 class="game_text_1">Game</h1>
+        <p class="many_text">Battle Royale</p>
+        <p class="many_text">An exciting battle between 12 Squads</p>
+    </div>
+    <div class="playnow_bt active"><a href="room1.php?time=11">Play Now</a></div>
+</div>
+<div class="col-lg-3 col-sm-6">
+    <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlzdjkyYmEyd2R3NDVteGZ4bHhpdWhseWxqdGl6ODQzYjZmMzRsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgVG03iAINEG69Iz2v/giphy.gif') center/cover;">
+        <h1 class="number_text">03</h1>
+        <h1 class="game_text_1">Game</h1>
+        <p class="many_text">Battle Royale</p>
+        <p class="many_text">An exciting battle between 12 Squads</p>
+    </div>
+    <div class="playnow_bt active"><a href="room1.php?time=12">Play Now</a></div>
+</div>
+<div class="col-lg-3 col-sm-6">
+    <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdydDBoc3lkcXdpcWM2YWdweGVuMmp6ZjAxbjI1cmVjdHMxbThrYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a8GXVOeiBzPPG0L8cS/giphy.gif')center/cover;">
+        <h1 class="number_text">04</h1>
+        <h1 class="game_text_1">Game</h1>
+        <p class="many_text">Battle Royale</p>
+        <p class="many_text">An exciting battle between 12 Squads</p>
+    </div>
+    <div class="playnow_bt active"><a href="room1.php?time=1">Play Now</a></div>
+</div>
+
                   <div class="col-lg-3 col-sm-6">
                      <div class="image_2"  style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2w1cjY5MWlibms4aWtxdWVtNmZ6eXNzc2xqdzNzcjk0d2tiM3VocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ejRYBUd1sCrAiSBvgR/giphy.gif')center/cover;">
                         <h1 class="number_text">05</h1>
