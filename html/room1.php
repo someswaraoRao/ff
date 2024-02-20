@@ -60,10 +60,10 @@ if(isset($_GET['time'])) {
                 echo "Password: " . $row["pass"]. "<br>";
             }
         } else {
-            echo "No entry found in the ".$table." table with room ID ".$_SESSION['num'];
+            echo "Wait till the Match Starts";
         }
     } else {
-        echo "No entry found in the logins table with num ".$_SESSION['num']." and time ".$time;
+        echo "You are not registerd for Match at ".$time;
     }
 
     $conn->close();

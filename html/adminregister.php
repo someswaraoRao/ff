@@ -1,26 +1,30 @@
 
 
-   <style>
-        /* Add your CSS styles here */
-        .navbar {
-            overflow: hidden;
-            background-color: #333;
-        }
+<style>
+    /* Add your CSS styles here */
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Set navbar width to 100% */
+    }
 
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
 
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-    </style>
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+</style>
+
    <div class="navbar">
    <a href="adminregister.php">Home</a>
 

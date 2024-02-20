@@ -52,34 +52,28 @@
    <body>
       <!--header section start -->
       <div class="header_section">
-         <nav class="navbar navbar-dark bg-dark">
-            <a class="logo" href="index.html"><img src="team.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExample01">
-               <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                     <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="game.html">Game</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="client.html">Client</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-               </ul>
-               <form class="form-inline my-2 my-md-0">
-                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-               </form>
+      <nav class="navbar navbar-dark bg-dark">
+            <a class="logo"><img src="team.png"></a>
+            <div id="navbarsExample01">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ffregister.php">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Log Out</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="game.html">Game</a>
+                    </li> -->
+                </ul>
             </div>
-         </nav>
+        </nav>
       </div>
       <!--header section end -->
       <!-- game section start -->
@@ -91,72 +85,43 @@
                <div class="row">
                <div class="col-lg-3 col-sm-6">
     <div class="image_2" style="background: url('https://media.giphy.com/media/Aq8sbOJuScX8X7Vhnw/giphy.gif')center/cover;">
-        <h1 class="number_text">01</h1>
-        <h1 class="game_text_1">Game</h1>
+        <h1 class="number_text">Br1</h1>
+        <h1 class="game_text_1">Game At 10 AM</h1>
         <p class="many_text">Battle Royale</p>
         <p class="many_text">An exciting battle between 12 Squads</p>
     </div>
-    <div class="playnow_bt active"><a href="room1.php?time=10">Play Now</a></div>
+    <div class="playnow_bt active"><a href="room1.php?time=10">Get Room ID</a></div>
 </div>
 <div class="col-lg-3 col-sm-6">
     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF1eDF1aTByam1lN200b2NsY3k1Mm13bHZ5MW1yNzA0OHhtdnIwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cbZ4dcdB0RiZbgD4dr/giphy.gif') center/cover;">
-        <h1 class="number_text">02</h1>
-        <h1 class="game_text_1">Game</h1>
+        <h1 class="number_text">Br2</h1>
+        <h1 class="game_text_1">Game At 11 AM</h1>
         <p class="many_text">Battle Royale</p>
         <p class="many_text">An exciting battle between 12 Squads</p>
     </div>
-    <div class="playnow_bt active"><a href="room1.php?time=11">Play Now</a></div>
+    <div class="playnow_bt active"><a href="room1.php?time=11">Get Room ID</a></div>
 </div>
 <div class="col-lg-3 col-sm-6">
     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlzdjkyYmEyd2R3NDVteGZ4bHhpdWhseWxqdGl6ODQzYjZmMzRsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgVG03iAINEG69Iz2v/giphy.gif') center/cover;">
-        <h1 class="number_text">03</h1>
-        <h1 class="game_text_1">Game</h1>
+        <h1 class="number_text">Br3</h1>
+        <h1 class="game_text_1">Game At 12 PM</h1>
         <p class="many_text">Battle Royale</p>
         <p class="many_text">An exciting battle between 12 Squads</p>
     </div>
-    <div class="playnow_bt active"><a href="room1.php?time=12">Play Now</a></div>
+    <div class="playnow_bt active"><a href="room1.php?time=12">Get Room ID</a></div>
 </div>
 <div class="col-lg-3 col-sm-6">
     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdydDBoc3lkcXdpcWM2YWdweGVuMmp6ZjAxbjI1cmVjdHMxbThrYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a8GXVOeiBzPPG0L8cS/giphy.gif')center/cover;">
-        <h1 class="number_text">04</h1>
-        <h1 class="game_text_1">Game</h1>
+        <h1 class="number_text">Br4</h1>
+        <h1 class="game_text_1">Game At 1 PM</h1>
         <p class="many_text">Battle Royale</p>
         <p class="many_text">An exciting battle between 12 Squads</p>
     </div>
-    <div class="playnow_bt active"><a href="room1.php?time=1">Play Now</a></div>
+    <div class="playnow_bt active"><a href="room1.php?time=1">Get Room ID</a></div>
 </div>
 
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2w1cjY5MWlibms4aWtxdWVtNmZ6eXNzc2xqdzNzcjk0d2tiM3VocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ejRYBUd1sCrAiSBvgR/giphy.gif')center/cover;">
-                        <h1 class="number_text">05</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game1 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game3 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/8Rk2Ar5HCaJmS1FiGC/giphy.gif')center/cover;">
-                        <h1 class="number_text">06</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game2 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game4 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW10YzQxZ2hzbGd4eXZ5ODlyZ3psajN1eXRucjFhNnBlOGZ2NDd3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LCVE5gxTKVWva0DTYU/giphy.gif')center/cover;">
-                        <h1 class="number_text">07</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game5 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game6 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                     
-                  </div>
+               
+                 
                  
                  
                </div>

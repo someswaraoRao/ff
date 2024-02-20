@@ -57,17 +57,15 @@
             <div id="navbarsExample01">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
+                        <a class="nav-link" href="ffregister.html">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="game.html">Game</a>
-                    </li>
+                   
                 </ul>
             </div>
         </nav>
@@ -81,7 +79,7 @@
 <!-- side panel section end -->
 
          <!--banner section start -->
-         <div class="banner_section layout_padding">
+          <div class="banner_section layout_padding">
             <div class="container-fluid">
                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
@@ -108,87 +106,110 @@
    
       <!-- about section end -->
       <!-- game section start -->
-      <div class="game_section layout_padding " style="margin-top: 200px;">
-         <div class="container">
-            <h1 class="game_taital"><img src="hg.jpg"> <span>All Games Here</span></h1>
-
-            <div class="game_section_2 layout_padding">
-               <div class="row">
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/Aq8sbOJuScX8X7Vhnw/giphy.gif')center/cover;">
-                        <h1 class="number_text">01</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGF1eDF1aTByam1lN200b2NsY3k1Mm13bHZ5MW1yNzA0OHhtdnIwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cbZ4dcdB0RiZbgD4dr/giphy.gif') center/cover;" >
-                        <h1 class="number_text">02</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlzdjkyYmEyd2R3NDVteGZ4bHhpdWhseWxqdGl6ODQzYjZmMzRsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tgVG03iAINEG69Iz2v/giphy.gif') center/cover;">
-                        <h1 class="number_text">03</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2" style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdydDBoc3lkcXdpcWM2YWdweGVuMmp6ZjAxbjI1cmVjdHMxbThrYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/a8GXVOeiBzPPG0L8cS/giphy.gif')center/cover;">
-                        <h1 class="number_text">04</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Battle Royale</p>
-                        <p class="many_text">An exciting battle between 12 Squads</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2w1cjY5MWlibms4aWtxdWVtNmZ6eXNzc2xqdzNzcjk0d2tiM3VocyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ejRYBUd1sCrAiSBvgR/giphy.gif')center/cover;">
-                        <h1 class="number_text">05</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game1 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game3 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/8Rk2Ar5HCaJmS1FiGC/giphy.gif')center/cover;">
-                        <h1 class="number_text">06</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game2 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game4 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6">
-                     <div class="image_2"  style="background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW10YzQxZ2hzbGd4eXZ5ODlyZ3psajN1eXRucjFhNnBlOGZ2NDd3dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LCVE5gxTKVWva0DTYU/giphy.gif')center/cover;">
-                        <h1 class="number_text">07</h1>
-                        <h1 class="game_text_1">Game</h1>
-                        <p class="many_text">Game5 Winners</p>
-                        <p class="many_text">     Vs</p>
-                        <p class="many_text">Game6 Winners</p>
-                     </div>
-                     <div class="playnow_bt active"><a href="login.html">Play Now</a></div>
-                     
-                  </div>
-                 
-                 
-               </div>
-            </div>
-         </div>
       </div>
-      <!-- game section end -->
-      <!-- play section start -->
+      <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .Rules {
+    background-color: #fff;
+    color: black;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .Rules h1 {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .Rules p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .Rules .highlight {
+    color: #f44336; /* Highlight color */
+    font-weight: bold;
+  }
+
+  .prizes {
+    background-color: #fff;
+    color: black;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .prizes h1 {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .prizes .highlight {
+    color: #f44336; /* Highlight color */
+    font-weight: bold;
+  }
+</style>
+
+<div class="copyright_section">
+  <div class="Rules">
+    <h1>Game Rules</h1>
+    <ul>
+      <li>There will be 4 Battle Royale matches:</li>
+      <ul>
+        <li>1st BR match at 10 AM</li>
+        <li>2nd BR match at 11 AM</li>
+        <li>3rd BR match at 12 PM</li>
+        <li>4th BR match at 1 PM</li>
+      </ul>
+      <li>Winners of each Battle Royale match will qualify for the Clash Squad round.</li>
+      <li>There will be 3 Clash Squad matches:</li>
+      <ul>
+        <li>At 2:30 PM for the Semifinals</li>
+        <ul>
+          <li>1st CS match - 1st BR winners vs 3rd BR winners</li>
+          <li>2nd CS match - 2nd BR winners vs 4th BR winners</li>
+        </ul>
+        <li>At 3:30 PM for the Finals</li>
+        <ul>
+          <li>3rd CS match - 1st CS winners vs 2nd CS winners</li>
+        </ul>
+      </ul>
+    </ul>
+  </div>
+  <div class="prizes">
+    <h1>Prizes</h1>
+    <ul>
+      <li>Winners - 1000RS cash prize and a memento</li>
+      <li>Runners-up - 4 weekly memberships</li>
+      <li>80RS redeem code for the player with the highest kills in each Battle Royale (BR) match.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+    
+      
+
       <div class="play_section layout_padding">    
          <div class="container">
             <h1 class="play_taital"><img src="garena.png"> <span> </span></h1>
@@ -212,154 +233,7 @@
             </div>
          </div>
       </div>
-      <!-- game section end -->
-      <!-- casino section start -->
-     <!-- <div class="casino_section layout_padding">
-         <div class="container">
-            <h1 class="casino_taital"><img src="images/icon-1.png"> <span>Our Casino Price</span></h1>
-            <p class="game_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable</p>
-            <div class="casino_section_2 layout_padding">
-               <div class="row">
-                  <div class="col-sm-4">
-                     <div class="box_main">
-                        <h4 class="basic_text">Basic Plan</h4>
-                        <h1 class="date_text"><span class="font_size_20">$</span><span class="font_size_40">15</span> /Month</h1>
-                        <p class="lorem_text">Lorem Ipsum available, but the majority</p>
-                     </div>
-                     <div class="buynow_bt"><a href="#">Buy Now</a></div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="box_main">
-                        <h4 class="basic_text">Standra Plan</h4>
-                        <h1 class="date_text"><span class="font_size_20">$</span><span class="font_size_40">25</span> /Month</h1>
-                        <p class="lorem_text">Lorem Ipsum available, but the majority</p>
-                     </div>
-                     <div class="buynow_bt"><a href="#">Buy Now</a></div>
-                  </div>
-                  <div class="col-sm-4">
-                     <div class="box_main">
-                        <h4 class="basic_text">Premium Plan</h4>
-                        <h1 class="date_text"><span class="font_size_20">$</span><span class="font_size_40">35</span> /Month</h1>
-                        <p class="lorem_text">Lorem Ipsum available, but the majority</p>
-                     </div>
-                     <div class="buynow_bt"><a href="#">Buy Now</a></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>--!>
-      <!-- casino section end -->
-      <!-- client section start 
-      <div class="client_section layout_padding">
-         <div id="main_slider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <h1 class="casino_taital"><img src="images/icon-1.png"> <span>What Is Says Our Customer</span></h1>
-                     <div class="image_7"><img src="images/img-6.png"></div>
-                     <h4 class="jone_text">Jone Mark</h4>
-                     <p class="ipsum_text"><span class="padding_right_20"><img src="images/left-quote.png"> </span> Lorem ipsum dolor sit amet, <span class="padding_left_20"><img src="images/right-quote.png"></span></p>
-                     <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <h1 class="casino_taital"><img src="images/icon-1.png"> <span>What Is Says Our Customer</span></h1>
-                     <div class="image_7"><img src="images/img-6.png"></div>
-                     <h4 class="jone_text">Jone Mark</h4>
-                     <p class="ipsum_text"><span class="padding_right_20"><img src="images/left-quote.png"> </span> Lorem ipsum dolor sit amet, <span class="padding_left_20"><img src="images/right-quote.png"></span></p>
-                     <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <h1 class="casino_taital"><img src="images/icon-1.png"> <span>What Is Says Our Customer</span></h1>
-                     <div class="image_7"><img src="images/img-6.png"></div>
-                     <h4 class="jone_text">Jone Mark</h4>
-                     <p class="ipsum_text"><span class="padding_right_20"><img src="images/left-quote.png"> </span> Lorem ipsum dolor sit amet, <span class="padding_left_20"><img src="images/right-quote.png"></span></p>
-                     <p class="ipsum_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-                  </div>
-               </div>
-               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-               <i class="fa fa-angle-left"></i>
-               </a>
-               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-               <i class="fa fa-angle-right"></i>
-               </a>
-            </div>
-         </div>
-      </div>-->
-      <!-- client section end -->
-      <!-- contact section start
-      <div class="contact_section layout_padding">
-         <div class="container">
-            <h1 class="touch_taital"><img src="images/icon-1.png"> <span>Get In touch</span></h1>
-            <div class="contact_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="email_text">
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Name" name="Email">
-                        </div>
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
-                        </div>
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Email" name="Email">
-                        </div>
-                        <div class="mt-3">
-                           <form>
-                              <select name="cars" class="custom-select mb-3">
-                                 <option selected>Select Games</option>
-                                 <option value="volvo">Volvo</option>
-                                 <option value="fiat">Fiat</option>
-                                 <option value="audi">Audi</option>
-                              </select>
-                           </form>
-                        </div>
-                        <div class="form-group">
-                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                        </div>
-                        <div class="send_btn"><a href="#">SEND</a></div>
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="map_main">
-                        <div class="map-responsive">
-                           <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- contact section end -->
-      <!-- footer section start 
-      <div class="footer_section layout_padding">
-      <div class="container">
-         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Enter your email" aria-label="Enter your email" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-               <span class="input-group-text" id="basic-addon2">Subscribe</span>
-            </div>
-         </div>
-         <div class="social_icon">
-            <ul>
-               <li><a href="#"><img src="images/fb-icon.png"></a></li>
-               <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-               <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-               <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-            </ul>
-         </div>
-         <div class="location_section">
-            <ul>
-               <li><a href="#"><img src="images/mail-icon.png"><span class="padding_left_15">demo@gmail.com</span></a></li>
-               <li><a href="#"><img src="images/call-icon.png"><span class="padding_left_15">(+71 9876543210)</span></a></li>
-               <li><a href="#"><img src="images/map-icon.png"><span class="padding_left_15">Location</span></a></li>
-            </ul>
-         </div>
-         <!-- copyright section start -->
+     
          <div class="copyright_section">
             <h1 class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design"> Free Html Templates
             </h1>
@@ -386,4 +260,3 @@
       <script src="../../dist/js/bootstrap.min.js"></script>
    </body>
 </html>
-

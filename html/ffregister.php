@@ -10,6 +10,7 @@
             padding: 0;
             background-size: cover;
             background-color: darkgray;
+            background-image:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2E3N3lvbTh0ZGI5cWI0aHVnczU1Nmd1cTJldGY5aTZ4MG0zMWRuYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif')
         }
 
         .form1 {
@@ -35,7 +36,6 @@
             width: 90%;
             box-sizing: border-box;
             background-size: cover;
-            background-color: white;
             margin: auto; /* Center the form */
         }
 
@@ -73,6 +73,45 @@
             box-sizing: border-box;
             margin-bottom: 10px; /* Adjust spacing between buttons */
         }
+        form-control {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        }
+          form-control:focus {
+        border-color: #7d0a0a;
+       }
+         contact-form {
+        width: 35%;
+        margin: auto;
+        padding: 40px;
+        background-color: rgb(210, 214, 213);
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    .home-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.home-icon {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 100%;
+}
+
 
         button:hover {
             background-color: #218838;
@@ -87,13 +126,16 @@
     </style>
 </head>
 <body>
+<a href="index.php" class="home-button">
+    <img src="images/home-button-icon.webp" alt="Home" class="home-icon">
+</a>
     <h2>Select the Room time</h2>
     <div class="heading">
         <form action="" method="post" class="form1">
-            <button type="submit" name="time" value="10">10</button>
-            <button type="submit" name="time" value="11">11</button>
-            <button type="submit" name="time" value="12">12</button>
-            <button type="submit" name="time" value="1">1</button>
+            <button type="submit" name="time" value="10AM">10 AM</button>
+            <button type="submit" name="time" value="11AM">11 AM</button>
+            <button type="submit" name="time" value="12PM">12 PM</button>
+            <button type="submit" name="time" value="1PM">1 PM</button>
         </form>
     </div>
 
@@ -117,27 +159,18 @@
         if ($row_check['total'] < 12) {
             ?>
             <form action="" method="post" enctype="multipart/form-data">
-                <label for="team_name">Team Name:</label><br>
-                <input type="text" id="team_name" name="team_name"><br><br>
+            <input type="text" id="team_name" name="team_name" placeholder="Team Name" class="form-control" required>
+            <input type="text" id="lead_name" name="lead_name" placeholder="Lead Name" class="form-control" required>
+            <input type="tel" id="num" name="num" placeholder="Mobile Number" class="form-control" pattern="[0-9]{10}" required>
+            <input type="password" id="pass" name="pass" placeholder="Password" class="form-control" required>
+          
 
-                <label for="lead_name">Lead Name:</label><br>
-                <input type="text" id="lead_name" name="lead_name"><br><br>
-
-                <label for="num">Number:</label><br>
-                <input type="text" id="num" name="num"><br><br>
-
-                <label for="pass">Password:</label><br>
-                <input type="password" id="pass" name="pass"><br><br>
-
-                <label for="time">Time:</label><br>
-                <select id="time" name="time">
+                <select id="time" placeholder="Room Time" class="form-control" name="time">
                     <option value="<?php echo $time; ?>"><?php echo $time; ?></option>
-                </select><br><br>
+                </select>
 <img src="game 4.jpg" alt="" width="300px">
-                <label for="img">Upload Image:</label><br>
-                <input type="file" id="img" name="img"><br><br>
-                <label for="transaction_id">Transaction ID:</label><br>
-                <input type="text" id="transaction_id" name="transaction_id"><br><br>
+                <input type="file" placeholder="Payment_Screenshot" class="form-control" id="img" name="img" required>
+                <input type="text" placeholder="Transaction_id" class="form-control" id="transaction_id" name="transaction_id" required>
 
                 <input type="submit" value="Submit">
             </form>
