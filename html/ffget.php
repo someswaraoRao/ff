@@ -1,3 +1,16 @@
+<?php
+session_start(); // Start the session
+
+// Check if the session variable is not set
+if (!isset($_SESSION['password'])) {
+    // Redirect to alogin.php
+    header("Location: alogin.php");
+    exit(); // Ensure that code below is not executed after redirect
+}
+
+// Now you can use $_SESSION['password'] to access the stored password
+?>
+
 <style>
         /* Add your CSS styles here */
         .navbar {
@@ -25,6 +38,8 @@
         <a href="ffinsert.php">Insert Room Details</a>
         <a href="ffget.php">Check Details</a>
         <a href="remove.php">Remove</a>
+        <a href="logout.php">Logout</a>
+
     </div>
     <form action="" method="post">
     <button type="submit" name="time" value="10">10</button>
@@ -32,18 +47,12 @@
     <button type="submit" name="time" value="12">12</button>
     <button type="submit" name="time" value="1">1</button>
 </form>
-
 <?php
 // Check if a button was clicked
 if (isset($_POST['time'])) {
     $time = $_POST['time'];
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "freefire";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include "connect.php";
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
@@ -65,7 +74,8 @@ if (isset($_POST['time'])) {
             echo "<td>" . $row["num"]. "</td>";
             echo "<td>" . $row["time"]. "</td>";
             echo "<td>" . $row["t_id"]. "</td>";
-            echo "<td>" . $row["img"]. "</td>";
+            // Output the image using an HTML <img> tag
+            echo "<td><img src='" . $row["img"] . "' width='500'></td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -76,4 +86,3 @@ if (isset($_POST['time'])) {
     $conn->close();
 }
 ?>
-

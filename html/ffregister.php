@@ -9,9 +9,9 @@
             margin: 0;
             padding: 0;
             background-size: cover;
-            background-color: darkgray;
-            background-image:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2E3N3lvbTh0ZGI5cWI0aHVnczU1Nmd1cTJldGY5aTZ4MG0zMWRuYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif')
-        }
+            background-color:dimgray;
+            /* background-image:url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2E3N3lvbTh0ZGI5cWI0aHVnczU1Nmd1cTJldGY5aTZ4MG0zMWRuYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif')
+        } */}
 
         .form1 {
             margin-top: 0%;
@@ -94,22 +94,16 @@
         border-radius: 10px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
+ 
     .home-button {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    font-size: 34px; /* Adjust the font size as needed */
 }
 
 
-.home-icon {
-    width: 40px;
-    vertical-align: middle;
-    margin-right: 100%;
+.details {
+    text-align: center;
 }
 
 
@@ -126,16 +120,25 @@
     </style>
 </head>
 <body>
-<a href="index.php" class="home-button">
-    <img src="images/home-button-icon.webp" alt="Home" class="home-icon">
+<!-- Include Font Awesome CSS -->
+<!-- Include Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- HTML code for home icon and t justify-contentext -->
+<div style="display:flex; justify-content:space-between">
+<a href="index.php" class="home-button" >
+    <i class="fas fa-home home-icon"></i>
+    Home
 </a>
+
+</div>
     <h2>Select the Room time</h2>
     <div class="heading">
         <form action="" method="post" class="form1">
-            <button type="submit" name="time" value="10AM">10 AM</button>
-            <button type="submit" name="time" value="11AM">11 AM</button>
-            <button type="submit" name="time" value="12PM">12 PM</button>
-            <button type="submit" name="time" value="1PM">1 PM</button>
+            <button type="submit" name="time" value="10">10 AM</button>
+            <button type="submit" name="time" value="11">11 AM</button>
+            <button type="submit" name="time" value="12">12 PM</button>
+            <button type="submit" name="time" value="1">1 PM</button>
         </form>
     </div>
 
@@ -143,12 +146,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['time'])) {
         $time = $_POST['time'];
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "freefire";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        include "connect.php";
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
@@ -159,21 +157,27 @@
         if ($row_check['total'] < 12) {
             ?>
             <form action="" method="post" enctype="multipart/form-data">
-            <input type="text" id="team_name" name="team_name" placeholder="Team Name" class="form-control" required>
-            <input type="text" id="lead_name" name="lead_name" placeholder="Lead Name" class="form-control" required>
-            <input type="tel" id="num" name="num" placeholder="Mobile Number" class="form-control" pattern="[0-9]{10}" required>
-            <input type="password" id="pass" name="pass" placeholder="Password" class="form-control" required>
-          
+    <input type="text" id="team_name" name="team_name" placeholder="Team Name" class="form-control" required>
+    <input type="text" id="lead_name" name="lead_name" placeholder="Lead Name" class="form-control" required>
+    <input type="tel" id="num" name="num" placeholder="Mobile Number" class="form-control" pattern="[0-9]{10}" required>
+    <input type="password" id="pass" name="pass" placeholder="Password" class="form-control" required>
+    
+    <select id="time" placeholder="Room Time" class="form-control" name="time">
+        <option value="<?php echo $time; ?>"><?php echo $time; ?></option>
+    </select>
+    
+    <label for="" style="color:#fff;"> UPI ID :  7013760163@axl</label>
+    <img src="images/scanner.jpg" alt="7013760163@axl" width="300px">
+    <label for="" style="color:#fff;">Payment_Screenshot</label>
+    <input type="file" placeholder="Payment_Screenshot" class="form-control" id="img" name="img" required>
+    
+    <input type="text" placeholder="Transaction_id" class="form-control" id="transaction_id" name="transaction_id" required>
 
-                <select id="time" placeholder="Room Time" class="form-control" name="time">
-                    <option value="<?php echo $time; ?>"><?php echo $time; ?></option>
-                </select>
-<img src="game 4.jpg" alt="" width="300px">
-                <input type="file" placeholder="Payment_Screenshot" class="form-control" id="img" name="img" required>
-                <input type="text" placeholder="Transaction_id" class="form-control" id="transaction_id" name="transaction_id" required>
+    <input type="hidden" name="img_path" id="img_path" value="">
 
-                <input type="submit" value="Submit">
-            </form>
+    <input type="submit" value="Submit"><h4 style="color:white">In case of facing any problem contact: 7013760163 / 7780114699</h4>
+</form>
+
             <?php
         } else {
             echo "Booking Full";
@@ -182,33 +186,58 @@
         $conn->close();
     }
     ?>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['team_name'])) {
+    $teamName = $_POST['team_name'];
+    $leadName = $_POST['lead_name'];
+    $num = $_POST['num'];
+    $pass = $_POST['pass'];
+    $time = $_POST['time'];
+    $transactionId = $_POST['transaction_id'];
 
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['team_name'])) {
-        $teamName = $_POST['team_name'];
-        $leadName = $_POST['lead_name'];
-        $num = $_POST['num'];
-        $pass = $_POST['pass'];
-        $time = $_POST['time'];
-        $transactionId = $_POST['transaction_id'];
+    // File upload handling
+    $targetDir = "uploads/";
+    $fileName = basename($_FILES["img"]["name"]);
+    $targetFilePath = $targetDir . $fileName;
+    $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
+    // Check if image file is a actual image or fake image
+    $check = getimagesize($_FILES["img"]["tmp_name"]);
+    if($check !== false) {
+        // Allow certain file formats
+        $allowTypes = array('jpg','png','jpeg','gif');
+        if(in_array($fileType, $allowTypes)){
+            // Upload file to server
+            if(move_uploaded_file($_FILES["img"]["tmp_name"], $targetFilePath)){
+                // Insert image file path into database
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "INSERT INTO logins (team_name, lead_name, num, pass, time, t_id, img) VALUES ('$teamName', '$leadName', '$num', '$pass', '$time', '$transactionId', '$targetFilePath')";
+                if ($conn->query($sql) === TRUE) {
+                    // Display JavaScript alert message
+                    echo '<script>alert("Registered successfully");</script>';
+                    // Redirect to remove.php after 2 seconds
+                    echo '<script>setTimeout(function(){ window.location.href = "index.php"; });</script>';
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+
+                $conn->close();
+            }else{
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }else{
+            echo 'Sorry, only JPG, JPEG, PNG, GIF files are allowed to upload.';
         }
-
-        $sql = "INSERT INTO logins (team_name, lead_name, num, pass, time, t_id) VALUES ('$teamName', '$leadName', '$num', '$pass', '$time', '$transactionId')";
-        if ($conn->query($sql) === TRUE) {
-            // Display JavaScript alert message
-            echo '<script>alert("Room Booked successfully");</script>';
-            // Redirect to remove.php after 2 seconds
-            echo '<script>setTimeout(function(){ window.location.href = "index.php"; });</script>';
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-
-        $conn->close();
+    }else{
+        echo "File is not an image.";
     }
-    ?>
+}
+?>
+
+
 </body>
 </html>

@@ -32,6 +32,8 @@
         <a href="ffinsert.php">Insert Room Details</a>
         <a href="ffget.php">Check Details</a>
         <a href="remove.php">Remove</a>
+        <a href="logout.php">Logout</a>
+
     </div>
 
 <form action="" method="post">
@@ -46,12 +48,7 @@
 if (isset($_POST['time'])) {
     $time = $_POST['time'];
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "freefire";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include "connect.php";
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }

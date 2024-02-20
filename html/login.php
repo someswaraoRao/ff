@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: game.php");
         exit; // Make sure no further output is sent
     } else {
-        $alert_message = "Invalid phone number or password";
+      echo "<div style=\"color:white;\">Invalid phone number or password </div>";
     }
 
     $conn->close();
@@ -42,12 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         margin:1;
         padding:1;
         font-family: sans-serif;
-        display: flex;
-            justify-content: center;
-            align-items: center;
+       
             height: 100vh;
-            background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHF6Z3Zzbjk0NDh2Z3JiYTAxdXQ0ajhmeXAxdmptZHY5dWM3c3I1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif'); /* Add this line */
-            background-size: cover;
+            /* background-color: red; */
+      background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHF6Z3Zzbjk0NDh2Z3JiYTAxdXQ0ajhmeXAxdmptZHY5dWM3c3I1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZxrirVV6Lf7MKSo6fR/giphy.gif'); 
+      
+      background-size: cover; */
       }
       
       .login-box {
@@ -207,10 +207,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           bottom: 100%;
         }
       }
+
+      .home-button {
+    color:white;
+    margin-top: 20px;
+    font-size: 30px;
+   
+}
+
+.details {
+    text-align: center;
+}
       </style>
 </head>
 <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+<div style="display:flex; justify-content:space-between">
+<a href="index.php" class="home-button" >
+    <i class="fas fa-home home-icon"></i>
+    Home
+</a>
+
+
+</div>
     <div class="login-box">
         <h2>Login</h2>
         <form method="post">
@@ -228,6 +248,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span></span>
             <button type="submit" class="submit-btn">Submit</button>
 
-        </form>
+        </form><h6 style="color:white">If facing any problem contact: 7013760163 / 7780114699</h6>
       </div>
 

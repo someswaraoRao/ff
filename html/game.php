@@ -1,3 +1,16 @@
+<?php
+session_start(); // Start the session
+
+// Check if $_SESSION['num'] is not set or empty
+if (!isset($_SESSION['num']) || empty($_SESSION['num'])) {
+    // Redirect to login.php
+    header("Location: login.php");
+    exit; // Stop further execution
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>

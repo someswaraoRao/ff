@@ -1,6 +1,10 @@
 <html lang="en">
    <head>
       <style>
+         .imgs{
+            display: flex;
+            justify-content: center;
+         }
          .logo {
             display: inline-block;
             margin-right: 100px; /* Adjust the margin to match your layout */
@@ -53,7 +57,9 @@
       <!--header section start -->
       <div class="header_section">
          <nav class="navbar navbar-dark bg-dark">
-            <a class="logo"><img src="team.png"></a>
+            <div class="imgs"><a class="logo"><img src="team.png"></a>
+            </div>
+            
             <div id="navbarsExample01">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -65,6 +71,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alogin.php">AdminLogin</a>
+                    </li>
+                   
                    
                 </ul>
             </div>
@@ -88,9 +98,9 @@
                   <div class="carousel-inner">
                      <div class="carousel-item active">
                         <div class="container">
-                           <h4 class="banner_taital">Welcome to</h4>
+                           <h4 class="banner_taital">Welcome to SIGMA</h4>
                            <h1 class="banner_taital_1">FREE FIRE TOURNAMENT</h1>
-                           <p class="banner_text" style="align-items: center;">🎮"Compete in our thrilling tournament & stand a chance to win exciting prizes"🏆</p>
+                           <h6 class="banner_taital" style="font-size:15px">"Compete in our thrilling tournament & stand a chance to win exciting prizes"🏆</h6>
                            <div class="book_bt"><a href="ffregister.php">Registration</a></div>
                            <div class="book_bt"><a href="login.php">login</a></div>
                         </div>
@@ -104,106 +114,161 @@
       </div>
       <!--header section end -->
    
-      <!-- about section end -->
-      <!-- game section start -->
-      </div>
-      <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
 
-  .Rules {
-    background-color: #fff;
-    color: black;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
 
-  .Rules h1 {
-    color: red;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
 
-  .Rules p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+<style>
 
-  .Rules .highlight {
-    color: #f44336; /* Highlight color */
-    font-weight: bold;
-  }
+.conta {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  .prizes {
-    background-color: #fff;
-    color: black;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+.section {
+  margin-bottom: 20px;
+}
 
-  .prizes h1 {
-    color: red;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+.section h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
-  .prizes .highlight {
-    color: #f44336; /* Highlight color */
-    font-weight: bold;
-  }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f0f0;
+}
+
+.prize {
+  background-color:#ccc;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.time {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.match {
+  font-weight: bold;
+}
+
+.prize-details {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Colors */
+.qualifiers {
+  background-color:antiquewhite;
+}
+
+.semifinals {
+  background-color:azure;
+}
+
+.finals {
+  background-color: #007bff;
+}
 </style>
+<div class="play_section layout_padding">  
+<div class="conta">
+  <div class="section">
+   <h1>Game Rules</h1>
+   <h3>Be on Time  <br>
+   Check that Your team is ready befor match starts<br> 
+   We will give only 10 minutes to login <br>Check websit for Room id and Password <br> No PC Players Allowed <br> </h3>
 
-<div class="copyright_section">
-  <div class="Rules">
-    <h1>Game Rules</h1>
-    <ul>
-      <li>There will be 4 Battle Royale matches:</li>
-      <ul>
-        <li>1st BR match at 10 AM</li>
-        <li>2nd BR match at 11 AM</li>
-        <li>3rd BR match at 12 PM</li>
-        <li>4th BR match at 1 PM</li>
-      </ul>
-      <li>Winners of each Battle Royale match will qualify for the Clash Squad round.</li>
-      <li>There will be 3 Clash Squad matches:</li>
-      <ul>
-        <li>At 2:30 PM for the Semifinals</li>
-        <ul>
-          <li>1st CS match - 1st BR winners vs 3rd BR winners</li>
-          <li>2nd CS match - 2nd BR winners vs 4th BR winners</li>
-        </ul>
-        <li>At 3:30 PM for the Finals</li>
-        <ul>
-          <li>3rd CS match - 1st CS winners vs 2nd CS winners</li>
-        </ul>
-      </ul>
-    </ul>
+    <h2>Qualifiers</h2>
+    <table class="table">
+      <tr>
+        <th>Time</th>
+        <th>Match</th>
+      </tr>
+      <tr>
+        <td class="time">10:00 AM</td>
+        <td class="match">1st BR match</td>
+      </tr>
+      <tr>
+        <td class="time">11:00 AM</td>
+        <td class="match">2nd BR match</td>
+      </tr>
+      <tr>
+        <td class="time">12:00 PM</td>
+        <td class="match">3rd BR match</td>
+      </tr>
+      <tr>
+        <td class="time">1:00 PM</td>
+        <td class="match">4th BR match</td>
+      </tr>
+    </table>
   </div>
-  <div class="prizes">
-    <h1>Prizes</h1>
-    <ul>
-      <li>Winners - 1000RS cash prize and a memento</li>
-      <li>Runners-up - 4 weekly memberships</li>
-      <li>80RS redeem code for the player with the highest kills in each Battle Royale (BR) match.</li>
-    </ul>
+
+  <div class="section">
+    <h2>Semifinals</h2>
+    <table class="table">
+      <tr>
+        <th>Time</th>
+        <th>Match</th>
+      </tr>
+      <tr>
+        <td class="time">2:30 PM</td>
+        <td class="match semifinals">1st CS match</td>
+      </tr>
+      <tr>
+        <td class="time">2:30 PM</td>
+        <td class="match semifinals">2nd CS match</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Finals</h2>
+    <table class="table">
+      <tr>
+        <th>Time</th>
+        <th>Match</th>
+      </tr>
+      <tr>
+        <td class="time">3:30 PM</td>
+        <td class="match semifinals">3rd CS match</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Prizes</h2>
+    <div class="prize-details">
+      <span class="prize qualifiers">Winners:</span> 1000 RS cash prize and a memento<br>
+      <span class="prize qualifiers">Runners:</span> 4 weekly memberships<br>
+      <span class="prize">80 RS redeem code for the player with highest kills in each BR match</span>
+    </div>
   </div>
 </div>
 
-
-
-
+</div>
+</div>
+<br>
 
 
 
@@ -232,12 +297,11 @@
                </div>   
             </div>
          </div>
-      </div>
-     
-         <div class="copyright_section">
-            <h1 class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design"> Free Html Templates
+      </div><div class="copyright_section ">
+            <h1 class="copyright_text">Developed By 2nd Years CSD <a href=""> SRKR
             </h1>
          </div>
+       
          <!-- copyright section end -->
       </div>
       <!-- footer section end -->

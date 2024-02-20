@@ -44,7 +44,7 @@ if(isset($_GET['time'])) {
                 $table = 'br4';
                 break;
             default:
-                echo "Invalid time value";
+                echo "<div style='color: red;'>Invalid time value</div>";
                 exit;
         }
 
@@ -54,18 +54,74 @@ if(isset($_GET['time'])) {
 
         if ($result_br->num_rows > 0) {
             // Output data of each row
+            $details = [];
             while($row = $result_br->fetch_assoc()) {
-                echo "Details from ".$table.":<br>";
-                echo "Room ID: " . $row["room_id"]. "<br>";
-                echo "Password: " . $row["pass"]. "<br>";
+                $details[] = [
+                    'room_id' => $row["room_id"],
+                    'password' => $row["pass"]
+                ];
             }
         } else {
-            echo "Wait till the Match Starts";
+            $details = false;
         }
     } else {
-        echo "You are not registerd for Match at ".$time;
+        $details = 'unregistered';
     }
 
     $conn->close();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Details</title>
+    <style>body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-button {
+    margin-top: 20px;
+}
+
+.details {
+    text-align: center;
+}
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<!-- Include Font Awesome CSS -->
+
+<!-- HTML code for home icon -->
+<a href="game.php" class="home-button">
+    <i class="fas fa-home home-icon"></i>GO BACK
+</a>
+
+    <?php
+    if ($details === 'unregistered') {
+        echo "<div class='error'>You are not registered for the Match at ".$time."</div>";
+    } elseif ($details === false) {
+        echo "<div class='error'>Wait till the Match Starts</div>";
+    } else {
+        foreach ($details as $detail) {
+            echo "<div class='details'>";
+            echo "<h2>Details from ".$table.":</h2>";
+            echo "<h1>Room ID: " . $detail["room_id"] . "</h1>";
+
+            echo "<h1>Password: " . $detail["password"]. "</h1>";
+            echo "</div>";
+        }
+    }
+    ?>
+</body>
+</html>

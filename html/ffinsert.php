@@ -1,4 +1,17 @@
 <?php
+session_start(); // Start the session
+
+// Check if the session variable is not set
+if (!isset($_SESSION['password'])) {
+    // Redirect to alogin.php
+    header("Location: alogin.php");
+    exit(); // Ensure that code below is not executed after redirect
+}
+
+// Now you can use $_SESSION['password'] to access the stored password
+?>
+
+<?php
  include 'connect.php';
 
 if ($conn->connect_error) {
@@ -99,6 +112,8 @@ $conn->close();
         <a href="ffinsert.php">Insert Room Details</a>
         <a href="ffget.php">Check Details</a>
         <a href="remove.php">Remove</a>
+        <a href="logout.php">Logout</a>
+
     </div>
 <form action="" method="post">
     <label for="room_id1">Room ID for br1:</label>
