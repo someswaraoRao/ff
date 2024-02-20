@@ -66,12 +66,13 @@ if (isset($_POST['time'])) {
     if ($result->num_rows > 0) {
         // Output data of each row
         echo "<table border='1'>";
-        echo "<tr><th>Team Name</th><th>Lead Name</th><th>Number</th><th>Time</th><th>Transaction ID</th><th>Image</th></tr>";
+        echo "<tr><th>Team Name</th><th>Lead Name</th><th>Number</th><th>Password</th><th>Time</th><th>Transaction ID</th><th>Image</th></tr>";
         while($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . $row["team_name"]. "</td>";
             echo "<td>" . $row["lead_name"]. "</td>";
             echo "<td>" . $row["num"]. "</td>";
+            echo "<td>" . $row["pass"]. "</td>";
             echo "<td>" . $row["time"]. "</td>";
             echo "<td>" . $row["t_id"]. "</td>";
             // Output the image using an HTML <img> tag

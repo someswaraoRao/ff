@@ -187,6 +187,7 @@
     }
     ?>
 <?php
+include "connect.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['team_name'])) {
     $teamName = $_POST['team_name'];
     $leadName = $_POST['lead_name'];
@@ -195,48 +196,66 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['team_name'])) {
     $time = $_POST['time'];
     $transactionId = $_POST['transaction_id'];
 
-    // File upload handling
-    $targetDir = "uploads/";
-    $fileName = basename($_FILES["img"]["name"]);
-    $targetFilePath = $targetDir . $fileName;
-    $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
+    // Check if the transaction ID already exists in the database
+    $sql_check_transaction_id = "SELECT * FROM logins WHERE t_id='$transactionId'";
+    $result_check_transaction_id = $conn->query($sql_check_transaction_id);
+    if ($result_check_transaction_id->num_rows > 0) {
+        // Display alert if the transaction ID already exists
+        echo '<script>alert("Transaction ID already exists");</script>';
+    } else {
+        // Check if the mobile number already exists in the database
+        $sql_check_mobile_number = "SELECT * FROM logins WHERE num='$num' and time='$time'";
+        $result_check_mobile_number = $conn->query($sql_check_mobile_number);
+        if ($result_check_mobile_number->num_rows > 0) {
+            // Display alert if the mobile number already exists
+            echo '<script>alert("Mobile number already exists");</script>';
+        } else {
+            // File upload handling
+            $targetDir = "uploads/";
+            $fileName = basename($_FILES["img"]["name"]);
+            $targetFilePath = $targetDir . $fileName;
+            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
-    // Check if image file is a actual image or fake image
-    $check = getimagesize($_FILES["img"]["tmp_name"]);
-    if($check !== false) {
-        // Allow certain file formats
-        $allowTypes = array('jpg','png','jpeg','gif');
-        if(in_array($fileType, $allowTypes)){
-            // Upload file to server
-            if(move_uploaded_file($_FILES["img"]["tmp_name"], $targetFilePath)){
-                // Insert image file path into database
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+            // Check if image file is a actual image or fake image
+            $check = getimagesize($_FILES["img"]["tmp_name"]);
+            if ($check !== false) {
+                // Allow certain file formats
+                $allowTypes = array('jpg', 'png', 'jpeg', 'gif');
+                if (in_array($fileType, $allowTypes)) {
+                    // Upload file to server
+                    if (move_uploaded_file($_FILES["img"]["tmp_name"], $targetFilePath)) {
+                        // Insert image file path into database
+                        $conn = new mysqli($servername, $username, $password, $dbname);
+                        if ($conn->connect_error) {
+                            die("Connection failed: " . $conn->connect_error);
+                        }
 
-                $sql = "INSERT INTO logins (team_name, lead_name, num, pass, time, t_id, img) VALUES ('$teamName', '$leadName', '$num', '$pass', '$time', '$transactionId', '$targetFilePath')";
-                if ($conn->query($sql) === TRUE) {
-                    // Display JavaScript alert message
-                    echo '<script>alert("Registered successfully");</script>';
-                    // Redirect to remove.php after 2 seconds
-                    echo '<script>setTimeout(function(){ window.location.href = "index.php"; });</script>';
+                        $sql = "INSERT INTO logins (team_name, lead_name, num, pass, time, t_id, img) VALUES ('$teamName', '$leadName', '$num', '$pass', '$time', '$transactionId', '$targetFilePath')";
+                        if ($conn->query($sql) === TRUE) {
+                            // Display JavaScript alert message
+                            echo '<script>alert("Registered successfully");</script>';
+                            // Redirect to remove.php after 2 seconds
+                            echo '<script>setTimeout(function(){ window.location.href = "index.php"; });</script>';
+                        } else {
+                            echo "Error: " . $sql . "<br>" . $conn->error;
+                        }
+
+                        $conn->close();
+                    } else {
+                        echo "Sorry, there was an error uploading your file.";
+                    }
                 } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
+                    echo 'Sorry, only JPG, JPEG, PNG, GIF files are allowed to upload.';
                 }
-
-                $conn->close();
-            }else{
-                echo "Sorry, there was an error uploading your file.";
+            } else {
+                echo "File is not an image.";
             }
-        }else{
-            echo 'Sorry, only JPG, JPEG, PNG, GIF files are allowed to upload.';
         }
-    }else{
-        echo "File is not an image.";
     }
 }
 ?>
+
+
 
 
 </body>

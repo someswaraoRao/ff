@@ -66,7 +66,7 @@
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ffregister.html">Register</a>
+                        <a class="nav-link" href="ffregister.php">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>

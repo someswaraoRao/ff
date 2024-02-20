@@ -4,12 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num = $_POST['num'];
     $pass = $_POST['pass'];
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "freefire";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
+include "connect.php";
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
