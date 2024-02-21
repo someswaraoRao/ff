@@ -195,7 +195,10 @@
 <div class="conta">
   <div class="section">
    <h1>Game Rules</h1>
-   <h3>Be on Time  <br>
+   <h3>Be on Time  <br>24th FEB  <br>
+   120 per team for 1 BR match <br>
+   You can Register for 4 Br rooms <br>
+
    Check that Your team is ready befor match starts<br> 
    We will give only 10 minutes to login <br>Check websit for Room id and Password <br> No PC Players Allowed <br> </h3>
 
